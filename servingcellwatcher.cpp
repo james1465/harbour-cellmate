@@ -1,4 +1,5 @@
 #include "servingcellwatcher.h"
+#include "nrradiosignal.h"
 #include "lteradiosignal.h"
 #include "wcdmaradiosignal.h"
 #include "gsmradiosignal.h"
@@ -27,12 +28,6 @@ void ServingCellWatcher::clearServingCell()
 
 }
 
-
-void ServingCellWatcher::updateNRFields(RadioSignal* rs)
-{
-
-}
-
 void ServingCellWatcher::updateCommonFields(RadioSignal* rs)
 {
     this->mcc = QString::number(rs->getMCC().value());
@@ -43,6 +38,36 @@ void ServingCellWatcher::updateCommonFields(RadioSignal* rs)
     emit mncChanged();
     emit signalStrengthChanged();
     emit signalLevelDbmChanged();
+}
+
+void ServingCellWatcher::updateNRFields(RadioSignal* rs)
+{
+    qDebug("Updating Serving Cell Fields to NR");
+    this->rat = QString("NR");
+    updateCommonFields(rs);
+    NrRadioSignal* nrs = qobject_cast<NrRadioSignal*>(rs);
+    // LTE and NR:
+    this->pci = QString::number(nrs->getPCI().value());
+    this->tac = QString::number(nrs->getTac().value());
+    // NR:
+    this->nciString = nrs->getNciString().value();
+    this->nrarfcn = QString::number(nrs->getNrarfcn().value());
+    this->ssRsrp = QString::number(nrs->getSsRsrp().value());
+    this->ssRsrq = QString::number(nrs->getSsRsrq().value());
+    this->ssSinr = QString::number(nrs->getSsSinr().value());
+    this->csiRsrp = QString::number(nrs->getCsiRsrp().value());
+    this->csiRsrq = QString::number(nrs->getCsiRsrq().value());
+    this->csiSinr = QString::number(nrs->getCsiSinr().value());
+    emit pciChanged();
+    emit tacChanged();
+    emit nciStringChanged();
+    emit nrarfcnChanged();
+    emit ssRsrpChanged();
+    emit ssRsrqChanged();
+    emit ssSinrChanged();
+    emit csiRsrpChanged();
+    emit csiRsrqChanged();
+    emit csiSinrChanged();
 }
 
 void ServingCellWatcher::updateLTEFields(RadioSignal* rs)
