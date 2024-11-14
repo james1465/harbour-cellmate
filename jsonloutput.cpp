@@ -6,7 +6,7 @@
 JSONLOutput::JSONLOutput(LocationProvider* locator, QObject* parent) :
     QObject(parent), locator(locator)
 {
-    logFile = new QTemporaryFile("CellMonXXXXXX.jsonl", this);
+    logFile = new QTemporaryFile("CellMate_XXXXXX.jsonl", this);
     logStream.reset(new QTextStream(logFile));
     logFile->setAutoRemove(false);
 }
@@ -45,6 +45,15 @@ void JSONLOutput::addField(QString name, QString value)
 void JSONLOutput::addField(QString name, int value)
 {
     (*currentReport)[name] = QString::number(value);
+}
+
+void JSONLOutput::close(QString fileName)
+{
+    this->logStream->flush();
+    this->logStream->reset();
+    this->logFile->rename(fileName);
+    qDebug() << "Saving as: " << fileName;
+    this->logFile->close();
 }
 
 JSONLOutput::~JSONLOutput()

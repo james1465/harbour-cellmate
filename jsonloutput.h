@@ -16,6 +16,7 @@ public:
     void endReport();
     void addField(QString name, QString value);
     void addField(QString name, int value);
+    void close(QString filename);
 
     template<class T>
     void addOptionalField(QString name, std::optional<T> optionalValue)

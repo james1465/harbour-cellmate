@@ -8,6 +8,15 @@ LogRecorder::LogRecorder(CellWatcher* watcher,
     connect(timer, SIGNAL(timeout()), this, SLOT(periodicRecord()));
 }
 
+QString LogRecorder::getFilename(){
+    return this->filename;
+}
+void LogRecorder::setFilename(QString fileName){
+    this->filename = fileName;
+    qDebug() << "Filename Changed: " << filename;
+    emit filenameChanged();
+}
+
 void LogRecorder::startRecording()
     {
     this->isRecording=true;
@@ -24,6 +33,7 @@ void LogRecorder::stopRecording()
     this->isRecording=false;
     emit recordingChanged();
     timer->stop();
+    logger->close(this->filename);
     }
 
 void LogRecorder::periodicRecord()

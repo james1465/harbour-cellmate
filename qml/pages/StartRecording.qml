@@ -16,25 +16,7 @@ Dialog {
           id: startRecordingDialog
           title: "Start Recording"
         }
-
-        ValueButton {
-              anchors.horizontalCenter: parent.horizontalCenter
-              label: "Directory"
-              value: directoryPath ? directoryPath : "None"
-              onClicked: pageStack.push(folderPickerDialog)
-              }
-      }
-
-      Component {
-      id: folderPickerDialog
-
-      FolderPickerDialog {
-          title: "Save log to"
-
-          onAccepted: directoryPath = selectedPath
-          onRejected: directoryPath = StandardPaths.documents
-      }
-      }
+    }
 
     onDone: {
         if (result == DialogResult.Accepted) {

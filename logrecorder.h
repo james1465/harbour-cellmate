@@ -10,9 +10,11 @@ class LogRecorder: public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool isRecording MEMBER isRecording NOTIFY recordingChanged)
-    Q_PROPERTY(QString filename MEMBER filename NOTIFY filenameChanged)
+    Q_PROPERTY(QString filename READ getFilename WRITE setFilename NOTIFY filenameChanged)
 public:
     LogRecorder(CellWatcher* watcher, LocationProvider* locator);
+    QString getFilename();
+    void setFilename(QString fileName);
 
 signals:
     void recordingChanged();

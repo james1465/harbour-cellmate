@@ -18,13 +18,13 @@ Dialog {
             width: parent.width
             label: "Name"
             text: logger.filename
-            readOnly: True
         }
     }
 
 
     onDone: {
         if (result == DialogResult.Accepted) {
+            logger.filename = nameField.text;
             logger.stopRecording();
         }
     }
