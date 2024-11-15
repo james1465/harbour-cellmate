@@ -8,6 +8,7 @@ URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
+BuildRequires:  pkgconfig(mlite5)
 BuildRequires:  pkgconfig(qofono-qt5)
 BuildRequires:  pkgconfig(qofonoext)
 BuildRequires:  pkgconfig(Qt5Core)
