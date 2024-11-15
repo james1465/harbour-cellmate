@@ -6,6 +6,8 @@ Release:    1
 License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
+Requires:  qt5-qtdeclarative-import-sensors
+Requires:  qt5-qtdeclarative-import-positioning
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(mlite5)
