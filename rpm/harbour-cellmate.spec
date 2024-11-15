@@ -14,6 +14,9 @@ BuildRequires:  pkgconfig(qofonoext)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
+BuildRequires:  qt5-qtdeclarative-import-sensors
+BuildRequires:  qt5-qtdeclarative-import-positioning
+BuildRequires:  qt5-qtpositioning-devel
 BuildRequires:  desktop-file-utils
 
 %description
