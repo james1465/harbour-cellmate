@@ -3,7 +3,6 @@
 #endif
 
 #include <sailfishapp.h>
-#include <QtQml>
 #include <CellWatcher.h>
 #include <ltecellwatcher.h>
 #include <umtscellwatcher.h>
