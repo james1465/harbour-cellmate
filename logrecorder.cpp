@@ -19,13 +19,13 @@ void LogRecorder::setFilename(QString fileName){
 
 void LogRecorder::startRecording()
     {
-    this->isRecording=true;
-    emit recordingChanged();
     logger.reset(new JSONLOutput(locator, this));
         timer->start(1000);
     this->filename = logger->getFilename();
     qDebug() << "Logging to: " << this->filename;
     emit filenameChanged();
+    this->isRecording=true;
+    emit recordingChanged();
     }
 
 void LogRecorder::stopRecording()

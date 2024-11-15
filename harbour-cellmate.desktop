@@ -17,4 +17,4 @@ OrganizationName=uk.co.solotel
 # ApplicationName does not have to be identical to Name
 ApplicationName=cellmate
 # Add the required permissions here
-Permissions=Connman;Internet
+Permissions=Connman;Internet;Documents;Location

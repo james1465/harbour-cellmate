@@ -6,7 +6,10 @@
 JSONLOutput::JSONLOutput(LocationProvider* locator, QObject* parent) :
     QObject(parent), locator(locator)
 {
-    logFile = new QTemporaryFile("CellMate_XXXXXX.jsonl", this);
+    const QString savePath =
+            QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)
+            + "/CellMate_XXXXXX.jsonl";
+    logFile = new QTemporaryFile(savePath, this);
     logStream.reset(new QTextStream(logFile));
     logFile->setAutoRemove(false);
 }
@@ -52,8 +55,8 @@ void JSONLOutput::close(QString fileName)
     this->logStream->flush();
     this->logStream->reset();
     this->logFile->rename(fileName);
-    qDebug() << "Saving as: " << fileName;
     this->logFile->close();
+    qDebug() << "Saving as: " << fileName;
 }
 
 JSONLOutput::~JSONLOutput()
