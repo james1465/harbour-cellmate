@@ -20,6 +20,7 @@ BuildRequires:  qt5-qtdeclarative-import-sensors
 BuildRequires:  qt5-qtdeclarative-import-positioning
 BuildRequires:  qt5-qtpositioning-devel
 BuildRequires:  desktop-file-utils
+BuildRequires:  qt5-qttools-linguist
 
 %description
 Monitors detected cells for LTE / UMTS and GSM. Reports these via the GUI and optionally records a logfile
