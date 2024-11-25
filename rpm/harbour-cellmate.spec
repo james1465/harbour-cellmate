@@ -26,7 +26,28 @@ BuildRequires:  qt5-qttools-linguist
 Monitors detected cells for LTE / UMTS and GSM. Reports these via the GUI and optionally records a logfile
 
 
-%prep
+
+%prep# This description section includes metadata for SailfishOS:Chum, see
+# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
+%if 0%{?_chum}
+Title: CellMate
+Type: desktop-application
+DeveloperName: James
+Categories:
+ - Utilities
+ - Science 
+Custom:
+  Repo: https://github.com/james1465/harbour-cellmate
+PackageIcon: TODO
+Screenshots:
+ - https://github.com/piggz/harbour-advanced-camera/raw/master/screenshots/screenshot1.png
+    TODO
+Links:
+  Homepage: https://github.com/james1465/harbour-cellmate
+  Help: https://github.com/james1465/harbour-cellmate/discussions
+  Bugtracker: https://github.com/piggz/harbour-advanced-camera/issues
+%endif
+
 %setup -q -n %{name}-%{version}
 
 %build
