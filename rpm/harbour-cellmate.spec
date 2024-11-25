@@ -27,7 +27,8 @@ Monitors detected cells for LTE / UMTS and GSM. Reports these via the GUI and op
 
 
 
-%prep# This description section includes metadata for SailfishOS:Chum, see
+%prep
+# This description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %if 0%{?_chum}
 Title: CellMate
