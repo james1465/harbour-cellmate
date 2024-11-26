@@ -29,6 +29,15 @@ Logs are written in a JSONL format. Each line of the log file is a JSON object c
 
 TODO
 
+## Screenshots
+
+### Serving Cell
+![serving_small](https://github.com/user-attachments/assets/bbe84f59-f10f-4fa9-bbaa-d186d1bccbfe)
+
+### LTE Measurements
+![lte_measurements_small](https://github.com/user-attachments/assets/6d45716e-a790-4133-932e-a9f5afb67d62)
+
+
 ## Attributions
 
 Thanks to Slava for the example implementation of the CellWatcher class on the forums:
