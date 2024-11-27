@@ -3,8 +3,8 @@ Name:       harbour-cellmate
 Summary:    Monitors the local cellular radio network
 Version:    0.1
 Release:    1
-License:    LICENSE
-URL:        http://example.org/
+License:    GPL-3.0-or-later
+URL:        https://github.com/james1465/harbour-cellmate
 Source0:    %{name}-%{version}.tar.bz2
 Requires:  qt5-qtdeclarative-import-sensors
 Requires:  qt5-qtdeclarative-import-positioning
@@ -41,12 +41,15 @@ Custom:
   Repo: https://github.com/james1465/harbour-cellmate
 PackageIcon: TODO
 Screenshots:
- - https://github.com/piggz/harbour-advanced-camera/raw/master/screenshots/screenshot1.png
+ -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/serving_small.png
+ -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/gsm_measurements_small.png
+ -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/umts_measurements_small.png
+ -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/lte_measurements_small.png
     TODO
 Links:
   Homepage: https://github.com/james1465/harbour-cellmate
   Help: https://github.com/james1465/harbour-cellmate/discussions
-  Bugtracker: https://github.com/piggz/harbour-advanced-camera/issues
+  Bugtracker: https://github.com/james1465/harbour-cellmate/issues 
 %endif
 
 %setup -q -n %{name}-%{version}
