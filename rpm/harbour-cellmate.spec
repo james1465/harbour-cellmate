@@ -3,7 +3,7 @@ Name:       harbour-cellmate
 Summary:    Monitors the local cellular radio network
 Version:    0.1
 Release:    1
-License:    GPL-3.0-or-later
+License:    GPLv3
 URL:        https://github.com/james1465/harbour-cellmate
 Source0:    %{name}-%{version}.tar.bz2
 Requires:  qt5-qtdeclarative-import-sensors
