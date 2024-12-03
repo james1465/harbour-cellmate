@@ -45,7 +45,6 @@ Screenshots:
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/gsm_measurements_small.png
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/umts_measurements_small.png
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/lte_measurements_small.png
-    TODO
 Links:
   Homepage: https://github.com/james1465/harbour-cellmate
   Help: https://github.com/james1465/harbour-cellmate/discussions
