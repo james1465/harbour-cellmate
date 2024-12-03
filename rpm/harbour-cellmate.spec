@@ -23,7 +23,8 @@ BuildRequires:  desktop-file-utils
 BuildRequires:  qt5-qttools-linguist
 
 %description
-Monitors detected cells for LTE / UMTS and GSM. Reports these via the GUI and optionally records a logfile
+Monitors detected cells for LTE / UMTS and GSM.
+Reports these via the GUI and optionally records a logfile
 
 
 
