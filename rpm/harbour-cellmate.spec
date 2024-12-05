@@ -27,11 +27,10 @@ Monitors detected cells for LTE / UMTS and GSM. Reports these via the GUI and op
 
 
 
-%prep
 # This description section includes metadata for SailfishOS:Chum, see
 # https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %if 0%{?_chum}
-Title: CellMate
+PackageName: CellMate
 Type: desktop-application
 DeveloperName: James
 Categories:
@@ -39,19 +38,19 @@ Categories:
  - Science 
 Custom:
   Repo: https://github.com/james1465/harbour-cellmate
-PackageIcon: TODO
+PackageIcon: https://github.com/james1465/harbour-cellmate/blob/main/icons/86x86/harbour-cellmate.png
 Screenshots:
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/serving_small.png
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/gsm_measurements_small.png
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/umts_measurements_small.png
  -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/lte_measurements_small.png
-    TODO
 Links:
   Homepage: https://github.com/james1465/harbour-cellmate
   Help: https://github.com/james1465/harbour-cellmate/discussions
   Bugtracker: https://github.com/james1465/harbour-cellmate/issues 
 %endif
 
+%prep
 %setup -q -n %{name}-%{version}
 
 %build
