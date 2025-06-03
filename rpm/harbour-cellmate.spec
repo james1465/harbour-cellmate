@@ -39,7 +39,7 @@ Categories:
  - Science 
 Custom:
   Repo: https://github.com/james1465/harbour-cellmate
-PackageIcon: https://github.com/james1465/harbour-cellmate/blob/main/icons/86x86/harbour-cellmate.png
+PackageIcon: https://github.com/james1465/harbour-cellmate/raw/main/icons/86x86/harbour-cellmate.png
 Screenshots:
  -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/serving_small.png
  -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/gsm_measurements_small.png
