@@ -41,10 +41,10 @@ Custom:
   Repo: https://github.com/james1465/harbour-cellmate
 PackageIcon: https://github.com/james1465/harbour-cellmate/blob/main/icons/86x86/harbour-cellmate.png
 Screenshots:
- -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/serving_small.png
- -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/gsm_measurements_small.png
- -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/umts_measurements_small.png
- -  https://github.com/james1465/harbour-cellmate/blob/main/screenshots/lte_measurements_small.png
+ -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/serving_small.png
+ -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/gsm_measurements_small.png
+ -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/umts_measurements_small.png
+ -  https://github.com/james1465/harbour-cellmate/raw/main/screenshots/lte_measurements_small.png
 Links:
   Homepage: https://github.com/james1465/harbour-cellmate
   Help: https://github.com/james1465/harbour-cellmate/discussions
