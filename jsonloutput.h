@@ -6,6 +6,8 @@
 #include <QtCore>
 #include <locationprovider.h>
 
+#include <optional>
+
 class JSONLOutput : QObject
 {
 public:

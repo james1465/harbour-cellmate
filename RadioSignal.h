@@ -6,6 +6,8 @@
 #include <QObject>
 #include <jsonloutput.h>
 
+#include <optional>
+
 class RadioSignal : public QObject
 {
     Q_OBJECT
