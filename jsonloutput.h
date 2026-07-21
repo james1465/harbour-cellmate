@@ -6,6 +6,12 @@
 #include <QtCore>
 #include <locationprovider.h>
 
+#ifdef __has_header
+#if __has_header(<optional>)
+#include <optional>
+#endif
+#endif
+
 class JSONLOutput : QObject
 {
 public:

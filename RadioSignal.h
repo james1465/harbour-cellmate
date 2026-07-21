@@ -6,6 +6,12 @@
 #include <QObject>
 #include <jsonloutput.h>
 
+#ifdef __has_header
+#if __has_header(<optional>)
+#include <optional>
+#endif
+#endif
+
 class RadioSignal : public QObject
 {
     Q_OBJECT
